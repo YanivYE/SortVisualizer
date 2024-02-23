@@ -5,6 +5,7 @@ from SortMethods.BubbleSort import BubbleSort
 from SortMethods.QuickSort import QuickSort
 from SortMethods.MergeSort import MergeSort
 from SortMethods.SelectionSort import SelectionSort
+from SortMethods.HeapSort import HeapSort
 
 # initialises and global variables
 
@@ -66,8 +67,10 @@ def main():
 
     selection = SelectionSort(200, 300, 200, 80, WIDTH)
 
+    heap = HeapSort(600, 300, 200, 80, WIDTH)
 
-    sort_btns = [insertion, bubble, quick, merge, selection]
+
+    sort_btns = [insertion, bubble, quick, merge, selection, heap]
 
     clicked_button = None
     running = True
