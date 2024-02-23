@@ -4,3 +4,6 @@ currently supporting:
 - Bubble Sort
 - Insertion Sort
 - Quick Sort
+- Merge Sort
+- Selection Sort
+- Heap Sort
