@@ -15,7 +15,7 @@ class MergeSort(Sort):
     def __init__(self, x, y, width, height, win_width) -> None:
         super().__init__(x, y, width, height, win_width)
         self.text = "Merge Sort"
-        self.speed = 1
+        self.speed = 3
 
     def draw(self, win):
         super().draw(win, self.text)

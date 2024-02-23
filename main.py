@@ -4,12 +4,13 @@ from SortMethods.InsertionSort import InsertionSort
 from SortMethods.BubbleSort import BubbleSort
 from SortMethods.QuickSort import QuickSort
 from SortMethods.MergeSort import MergeSort
+from SortMethods.SelectionSort import SelectionSort
 
 # initialises and global variables
 
 pygame.font.init()
 font = pygame.font.SysFont('arial', 28)
-FPS = 80
+FPS = 50
 WHITE = (255, 255, 255)
 GRAY = (192, 192, 192)
 
@@ -63,9 +64,10 @@ def main():
 
     merge = MergeSort(600, 200, 200, 80, WIDTH)
 
-    # selection  = SelectionSort(400, 300, 200, 80)
+    selection = SelectionSort(200, 300, 200, 80, WIDTH)
 
-    sort_btns = [insertion, bubble, quick, merge]
+
+    sort_btns = [insertion, bubble, quick, merge, selection]
 
     clicked_button = None
     running = True
