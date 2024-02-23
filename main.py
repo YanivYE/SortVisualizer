@@ -2,9 +2,9 @@ from re import T
 from tkinter import N
 import pygame
 from slider import Slider
-from SortMethods.insertionSort import InsertionSort
-from SortMethods.bubbleSort import BubbleSort
-from SortMethods.quickSort import QuickSort
+from SortMethods.InsertionSort import InsertionSort
+from SortMethods.BubbleSort import BubbleSort
+from SortMethods.QuickSort import QuickSort
 
 # initialises and global variables
 
