@@ -1,4 +1,5 @@
 import pygame
+import time
 from slider import Slider
 from SortMethods.InsertionSort import InsertionSort
 from SortMethods.BubbleSort import BubbleSort
@@ -107,6 +108,8 @@ def main():
             drawSorting(win, clicked_button, next(sorting_states))
         except StopIteration:
             print(curr_state)
+            time.sleep(1.5)
+
             running = False
 
         curr_state += 1
