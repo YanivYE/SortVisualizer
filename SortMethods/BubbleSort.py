@@ -15,7 +15,7 @@ class BubbleSort(Sort):
     def __init__(self, x, y, width, height, win_width) -> None:
         super().__init__(x, y, width, height, win_width)
         self.text = "Bubble Sort"
-        self.speed = 1
+        self.speed = 0.5
 
     def draw(self, win):
         super().draw(win, self.text)
