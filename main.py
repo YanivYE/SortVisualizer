@@ -3,6 +3,7 @@ from slider import Slider
 from SortMethods.InsertionSort import InsertionSort
 from SortMethods.BubbleSort import BubbleSort
 from SortMethods.QuickSort import QuickSort
+from SortMethods.MergeSort import MergeSort
 
 # initialises and global variables
 
@@ -54,13 +55,17 @@ def main():
 
     slider = Slider(200, 500, 600, 50)
 
-    insertion = InsertionSort(200, 120, 200, 80, WIDTH)
+    insertion = InsertionSort(200, 100, 200, 80, WIDTH)
 
-    bubble = BubbleSort(200, 220, 200, 80, WIDTH)
+    bubble = BubbleSort(200, 200, 200, 80, WIDTH)
 
-    quick = QuickSort(600, 120, 200, 80, WIDTH)
+    quick = QuickSort(600, 100, 200, 80, WIDTH)
 
-    sort_btns = [insertion, bubble, quick]
+    merge = MergeSort(600, 200, 200, 80, WIDTH)
+
+    # selection  = SelectionSort(400, 300, 200, 80)
+
+    sort_btns = [insertion, bubble, quick, merge]
 
     clicked_button = None
     running = True
@@ -70,6 +75,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+                break
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse = pygame.mouse.get_pos()
                 if slider.x < mouse[0] <= slider.x + slider.width and slider.y <= mouse[
@@ -78,12 +84,13 @@ def main():
                 clicked_button = buttons_clicked(sort_btns, mouse)
         drawWin(win, slider, sort_btns)
 
-    clicked_button.generateArray(int(slider.value))
+    if running:
+        clicked_button.generateArray(int(slider.value))
 
-    sorting_states = clicked_button.sort()
-    curr_state = 0
+        sorting_states = clicked_button.sort()
+        curr_state = 0
 
-    calculated_fps = len(clicked_button.array) / clicked_button.speed
+        calculated_fps = len(clicked_button.array) / clicked_button.speed
     while running:
 
         clock.tick(calculated_fps)

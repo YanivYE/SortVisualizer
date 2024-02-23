@@ -1,4 +1,3 @@
-from array import array
 import pygame
 
 from SortMethods.sort import Sort
