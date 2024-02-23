@@ -1,5 +1,3 @@
-from re import T
-from tkinter import N
 import pygame
 from slider import Slider
 from SortMethods.InsertionSort import InsertionSort
@@ -10,7 +8,7 @@ from SortMethods.QuickSort import QuickSort
 
 pygame.font.init()
 font = pygame.font.SysFont('arial', 28)
-FPS = 60
+FPS = 80
 WHITE = (255, 255, 255)
 GRAY = (192, 192, 192)
 
